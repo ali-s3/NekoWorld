@@ -10,7 +10,7 @@ dependencies:
     version: 0.12.0
   '@builder.io/qwik':
     specifier: ^0.101.0
-    version: 0.101.0(undici@5.22.0)
+    version: 0.101.0(undici@5.22.1)
   '@discordjs/core':
     specifier: ^1.0.1
     version: 1.0.1
@@ -51,8 +51,8 @@ dependencies:
     specifier: ^2.15.0
     version: 2.15.0
   '@vercel/analytics':
-    specifier: ^1.0.0
-    version: 1.0.0(react@18.2.0)
+    specifier: ^1.4.1
+    version: 1.4.1(next@13.1.1)(react@18.2.0)
   '@vercel/og':
     specifier: ^0.5.4
     version: 0.5.4
@@ -240,14 +240,14 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@builder.io/qwik@0.101.0(undici@5.22.0):
+  /@builder.io/qwik@0.101.0(undici@5.22.1):
     resolution: {integrity: sha512-uXeN5tlquw8OKsRp/tQie2tEKv5h6AuyiVpNzdCqc6VUW5c0OEB063HnUr072u0ojL/3vPfdY1mAi+6MwMaEXQ==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     hasBin: true
     peerDependencies:
       undici: ^5.14.0
     dependencies:
-      undici: 5.22.0
+      undici: 5.22.1
 
   /@colors/colors@1.5.0:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -1653,11 +1653,33 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: false
 
-  /@vercel/analytics@1.0.0(react@18.2.0):
-    resolution: {integrity: sha512-RQmj7pv82JwGDHrnKeRc6TtSw2U7rWNubc2IH0ernTzWTj02yr9zvIYiYJeztsBzrJtWv7m8Nz6vxxb+cdEtJw==}
+  /@vercel/analytics@1.4.1(next@13.1.1)(react@18.2.0):
+    resolution: {integrity: sha512-ekpL4ReX2TH3LnrRZTUKjHHNpNy9S1I7QmS+g/RQXoSUQ8ienzosuX7T9djZ/s8zPhBx1mpHP/Rw5875N+zQIQ==}
     peerDependencies:
-      react: ^16.8||^17||^18
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
     dependencies:
+      next: 13.1.1(react-dom@18.2.0)(react@18.2.0)(sass@1.57.1)
       react: 18.2.0
     dev: false
 
@@ -7968,7 +7990,7 @@ packages:
     peerDependencies:
       '@builder.io/qwik': '>=0.101.0'
     dependencies:
-      '@builder.io/qwik': 0.101.0(undici@5.22.0)
+      '@builder.io/qwik': 0.101.0(undici@5.22.1)
     dev: true
 
   /randombytes@2.1.0:
@@ -9433,18 +9455,11 @@ packages:
     resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
     dev: false
 
-  /undici@5.22.0:
-    resolution: {integrity: sha512-fR9RXCc+6Dxav4P9VV/sp5w3eFiSdOjJYsbtWfd4s5L5C4ogyuVpdKIVHeW0vV1MloM65/f7W45nR9ZxwVdyiA==}
-    engines: {node: '>=14.0'}
-    dependencies:
-      busboy: 1.6.0
-
   /undici@5.22.1:
     resolution: {integrity: sha512-Ji2IJhFXZY0x/0tVBXeQwgPlLWw13GVzpsWPQ3rV50IFMMof2I55PZZxtm4P6iNq+L5znYN9nSTAq0ZyE6lSJw==}
     engines: {node: '>=14.0'}
     dependencies:
       busboy: 1.6.0
-    dev: false
 
   /unicode-trie@2.0.0:
     resolution: {integrity: sha512-x7bc76x0bm4prf1VLg79uhAzKw8DVboClSN5VxJuQ+LKDOVEW9CdH+VY7SP+vX7xCYQqzzgQpFqz15zeLvAtZQ==}
